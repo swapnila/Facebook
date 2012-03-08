@@ -1,0 +1,17 @@
+database: &DATABASE
+  adapter: mysql2
+  password: root
+  username: root
+  host: localhost
+
+development:
+  <<: *DATABASE
+  database: facebook_development
+
+test:
+  <<: *DATABASE
+  database: facebook_test
+
+production:
+  <<: *DATABASE
+  database: facebook_production

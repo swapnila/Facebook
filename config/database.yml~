@@ -1,0 +1,17 @@
+database: &DATABASE
+  adapter: mysql2
+  password: root
+  username: root
+  host: localhost
+
+development:
+  <<: *DATABASE
+  database: realvolve_development
+
+test:
+  <<: *DATABASE
+  database: realvolve_test
+
+production:
+  <<: *DATABASE
+  database: realvolve_production
